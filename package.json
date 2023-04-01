@@ -1,7 +1,7 @@
 {
-  "name": "svg-vue3",
-  "version": "0.2.1",
-  "description": "Laravel Mix SVG Vue Component",
+  "name": "svg-vue-component",
+  "version": "0.0.1",
+  "description": "Laravel Mix SVG Vue Component forked from svg-vue3",
   "main": "dist/svg-vue.ssr.js",
   "browser": "dist/svg-vue.esm.js",
   "module": "dist/svg-vue.esm.js",
@@ -20,17 +20,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielstgt/svg-vue3.git"
+    "url": "git+https://github.com/amit-soni7/svg-vue-component.git"
   },
   "keywords": [
     "laravel mix",
     "svg-vue",
     "component"
   ],
-  "author": "Daniel Hartmann",
+  "author": "Amit kumar soni",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danielstgt/laravel-mix-svg-vue/issues"
+    "url": "https://github.com/amit-soni7/svg-vue-component/issues"
   },
   "dependencies": {},
   "devDependencies": {
