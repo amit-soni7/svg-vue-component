@@ -1,34 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@amit-soni7 
-danielstgt
-/
-svg-vue3
-Public
-Fork your own copy of danielstgt/svg-vue3
-Code
-Issues
-1
-Pull requests
-Actions
-Projects
-Security
-Insights
-svg-vue3/src/svg-vue.vue
-@danielstgt
-danielstgt use all attributes from svgo string
-Latest commit dc8414f on Aug 15, 2021
- History
- 1 contributor
-40 lines (31 sloc)  1.1 KB
- 
-
 <template>
     <svg
         v-bind="svgAttributes"
@@ -39,6 +8,7 @@ Latest commit dc8414f on Aug 15, 2021
 
 <script>
 import { computed } from 'vue';
+
 export default {
     name: 'SvgVue',
     props: {
@@ -46,7 +16,10 @@ export default {
     },
    setup(props) {
         const iconPath = computed(() => props.icon.replace(new RegExp('.'.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '\\$1'), 'g'), '/') + '.svg');
-        const svgString = computed(() => import(`./resources/svg/${iconPath.value}`).default);
+        const svgString =  computed(() => importString());
+        async function importString() {
+           return await import(`'svg-files-path'/${iconPath.value}`).default
+        }
         const svgAttributes = computed(() => {
             if (! svgString) return {};
             let wrapper = document.createElement('div');
