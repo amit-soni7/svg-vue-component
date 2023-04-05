@@ -56,7 +56,7 @@ function _nonIterableRest() {
       return props.icon.replace(new RegExp('.'.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '\\$1'), 'g'), '/') + '.svg';
     });
     var svgString = vue.computed(function () {
-      return require("".concat(iconPath.value)).default;
+      return require("svg-files-path/".concat(iconPath.value)).default;
     });
     var svgAttributes = vue.computed(function () {
       if (!svgString) return {};

@@ -7,7 +7,7 @@ var script = {
   },
   setup(props) {
     const iconPath = computed(() => props.icon.replace(new RegExp('.'.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '\\$1'), 'g'), '/') + '.svg');
-    const svgString = computed(() => require(`${iconPath.value}`).default);
+    const svgString = computed(() => require(`svg-files-path/${iconPath.value}`).default);
     const svgAttributes = computed(() => {
       if (!svgString) return {};
       let wrapper = document.createElement('div');
