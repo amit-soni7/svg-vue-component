@@ -1,4 +1,4 @@
-'use strict';var vue=require('vue');function _iterableToArrayLimit(arr, i) {
+'use strict';var vue=require('vue');function _interopNamespace(e){if(e&&e.__esModule)return e;var n=Object.create(null);if(e){Object.keys(e).forEach(function(k){if(k!=='default'){var d=Object.getOwnPropertyDescriptor(e,k);Object.defineProperty(n,k,d.get?d:{enumerable:true,get:function(){return e[k]}});}})}n["default"]=e;return Object.freeze(n)}function _iterableToArrayLimit(arr, i) {
   var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"];
   if (null != _i) {
     var _s,
@@ -56,7 +56,7 @@ function _nonIterableRest() {
       return props.icon.replace(new RegExp('.'.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '\\$1'), 'g'), '/') + '.svg';
     });
     var svgString = vue.computed(function () {
-      return require("./resources/svg/".concat(iconPath.value)).default;
+      return (function(t){return Promise.resolve().then(function(){return /*#__PURE__*/_interopNamespace(require(t))})})("./resources/svg/".concat(iconPath.value)).default;
     });
     var svgAttributes = vue.computed(function () {
       if (!svgString) return {};
